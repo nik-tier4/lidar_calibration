@@ -1,0 +1,29 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/nithilan/catkin_ws/install/Project/include/**",
+        "/home/nithilan/catkin_ws/**",
+        "/opt/ros/melodic/include/**",
+        "/home/nithilan/catkin_ws/src/geometry/eigen_conversions/include/**",
+        "/home/nithilan/catkin_ws/src/fast_gicp/include/**",
+        "/home/nithilan/catkin_ws/src/hdl_graph_slam/include/**",
+        "/home/nithilan/catkin_ws/src/geometry/kdl_conversions/include/**",
+        "/home/nithilan/catkin_ws/src/ndt_omp/include/**",
+        "/home/nithilan/catkin_ws/src/geometry/tf/include/**",
+        "/home/nithilan/catkin_ws/src/geometry/tf_conversions/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/g++",
+      "cStandard": "c11",
+      "cppStandard": "c++17"
+    }
+  ],
+  "version": 4
+}

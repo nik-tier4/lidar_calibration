@@ -1,0 +1,49 @@
+<launch>
+
+    <arg name="voxel_size" default="1.0" />
+    <arg name="ndt_epsilon" default="0.01" />
+    <arg name="ndt_step_size" default="0.1" />
+    <arg name="ndt_resolution" default="1.0" />
+    <arg name="ndt_iterations" default="400" />
+    <arg name="x" default="0" />
+    <arg name="y" default="0" />
+    <arg name="z" default="0" />
+    <arg name="roll" default="0" />
+    <arg name="pitch" default="0" />
+    <arg name="yaw" default="0" />
+
+    <node ns="right" pkg="multi_lidar_calibrator" type="multi_lidar_calibrator" name="lidar_calibrator" output="screen">
+        <param name="points_parent_src" value="/sensing/lidar/right/pointcloud_raw_ex" />
+        <param name="points_child_src" value="/sensing/lidar/top/pointcloud_raw_ex" />
+	<remap from="/points_calibrated" to="/right_velodyne_points" />
+        <param name="voxel_size" value="$(arg voxel_size)" />
+        <param name="ndt_epsilon" value="$(arg ndt_epsilon)" />
+        <param name="ndt_step_size" value="$(arg ndt_step_size)" />
+        <param name="ndt_resolution" value="$(arg ndt_resolution)" />
+        <param name="ndt_iterations" value="$(arg ndt_iterations)" />
+        <param name="x" value="-0.673" />
+        <param name="y" value="-0.044" />
+        <param name="z" value="-0.114" />
+        <param name="roll" value="-0.011" />
+        <param name="pitch" value="0.728" />
+        <param name="yaw" value="3.129" />
+    </node>
+
+    <node ns="left" pkg="multi_lidar_calibrator" type="multi_lidar_calibrator" name="lidar_calibrator" output="screen">
+        <param name="points_parent_src" value="/sensing/lidar/left/pointcloud_raw_ex" />
+        <param name="points_child_src" value="/sensing/lidar/top/pointcloud_raw_ex" />
+	<remap from="/points_calibrated" to="/left_velodyne_points" />
+        <param name="voxel_size" value="$(arg voxel_size)" />
+        <param name="ndt_epsilon" value="$(arg ndt_epsilon)" />
+        <param name="ndt_step_size" value="$(arg ndt_step_size)" />
+        <param name="ndt_resolution" value="$(arg ndt_resolution)" />
+        <param name="ndt_iterations" value="$(arg ndt_iterations)" />
+        <param name="x" value="-0.669" />
+        <param name="y" value="-0.004" />
+        <param name="z" value="-0.100" />
+        <param name="roll" value="0.034" />
+        <param name="pitch" value="-0.705" />
+        <param name="yaw" value="-0.022" />
+    </node>
+
+</launch>
