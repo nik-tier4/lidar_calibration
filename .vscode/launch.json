@@ -1,10 +1,16 @@
 {
     "version": "0.2.0",
     "configurations": [
-    {
+      {
         "name": "ROS: Attach",
         "type": "ros",
         "request": "attach"
-        }
+      },
+      {
+        "name": "ROS: Launch",
+        "type": "ros",
+        "request": "launch",
+        "target": "/home/nithilan/catkin_ws/src/hdl_graph_slam/launch/hdl_graph_slam.launch"
+      }
     ]
-}
+  }
